@@ -1,18 +1,219 @@
 <!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
-  </head>
-  <body>
-    <header>
-      <h1>Mi tienda</h1>
-      <nav><a href="#">Inicio</a> | <a href="#">Productos</a></nav>
-    </header>
-    <main>
-      <h2>Bienvenido</h2>
-      <p>Descubre nuestros productos</p>
-    </main>
+    <html lang="es">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GitHub Shop</title>
+        <link rel="stylesheet" href="css/output.css">
+      </head>
+      <body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
+        <!-- HEADER: sticky + fondo translúcido con blur -->
+        <header
+          class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md"
+        >
+          <div
+            class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
+          >
+            <!-- Logo -->
+            <a
+              href="#"
+              class="flex items-center gap-2 text-lg font-bold tracking-tight text-slate-900"
+            >
+              <span
+                class="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-br from-indigo-500 to-violet-600 text-white shadow-lg shadow-indigo-500/30"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="black"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                  />
+                </svg>
+              </span>
+              <h1 class="text-lg font-bold">GitHub Shop</h1>
+            </a>
+
+            <nav class="hidden items-center gap-1 md:flex">
+              <a
+                href="#"
+                class="rounded-lg bg-indigo-50 px-3 py-2 text-sm font-semibold text-indigo-600"
+                >Inicio</a
+              >
+              <a
+                href="#"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                >Productos</a
+              >
+              <a
+                href="#"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                >Ofertas</a
+              >
+              <a
+                href="#"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+                >Contacto</a
+              >
+            </nav>
+
+            <div class="flex items-center gap-2">
+              <a
+                href="#"
+                class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
+              >
+                Ver carrito
+              </a>
+              <button
+                id="menu-btn"
+                type="button"
+                aria-label="Abrir menú"
+                class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-slate-600 transition hover:bg-slate-100 md:hidden"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <nav
+            id="mobile-nav"
+            class="hidden border-t border-slate-200 bg-white px-4 py-3 md:hidden"
+          >
+            <div class="flex flex-col gap-1">
+              <a
+                href="#"
+                class="rounded-lg bg-indigo-50 px-3 py-2 text-sm font-semibold text-indigo-600"
+                >Inicio</a
+              >
+              <a
+                href="#"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+                >Productos</a
+              >
+              <a
+                href="#"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+                >Ofertas</a
+              >
+              <a
+                href="#"
+                class="rounded-lg px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+                >Contacto</a
+              >
+            </div>
+          </nav>
+        </header>
+
+        <main>
+          <section class="relative overflow-hidden">
+            <div
+              class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-indigo-300/40 blur-3xl"
+            ></div>
+            <div
+              class="pointer-events-none absolute top-40 -left-24 h-72 w-72 rounded-full bg-fuchsia-300/40 blur-3xl"
+            ></div>
+
+            <div
+              class="relative mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-28"
+            >
+              <span
+                class="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-white/70 px-3 py-1 text-xs font-medium text-indigo-700 shadow-sm"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-indigo-500"></span>
+                Nueva colección 2025
+              </span>
+
+              <h2
+                class="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
+              >
+                Bienvenido a
+                <span
+                  class="bg-linear-to-r from-indigo-600 to-fuchsia-500 bg-clip-text"
+                  >GitHub Shop</span
+                >
+              </h2>
+
+              <p
+                class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg"
+              >
+                Descubre nuestros productos: calidad, diseño y envío rápido.
+                Todo lo que buscas, en un solo lugar.
+              </p>
+
+              <div
+                class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
+              >
+                <a
+                  href="#"
+                  class="w-full rounded-xl bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:bg-indigo-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 sm:w-auto"
+                >
+                  Ver productos
+                </a>
+                <a
+                  href="#"
+                  class="w-full rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 sm:w-auto"
+                >
+                  Saber más
+                </a>
+              </div>
+
+              <!-- Mini estadísticas -->
+              <dl
+                class="mx-auto mt-14 grid max-w-2xl grid-cols-3 gap-4 border-t border-slate-200 pt-8"
+              >
+                <div>
+                  <dt
+                    class="text-xs font-medium uppercase tracking-wide text-slate-500"
+                  >
+                    Productos
+                  </dt>
+                  <dd class="mt-1 text-2xl font-bold text-slate-900">+500</dd>
+                </div>
+                <div>
+                  <dt
+                    class="text-xs font-medium uppercase tracking-wide text-slate-500"
+                  >
+                    Clientes
+                  </dt>
+                  <dd class="mt-1 text-2xl font-bold text-slate-900">+2k</dd>
+                </div>
+                <div>
+                  <dt
+                    class="text-xs font-medium uppercase tracking-wide text-slate-500"
+                  >
+                    Valoración
+                  </dt>
+                  <dd class="mt-1 text-2xl font-bold text-slate-900">4.9★</dd>
+                </div>
+              </dl>
+            </div>
+          </section>
+        </main>
+
+        <script>
+          // Menú móvil
+          const btn = document.getElementById("menu-btn");
+          const nav = document.getElementById("mobile-nav");
+          btn.addEventListener("click", () => nav.classList.toggle("hidden"));
+        </script>
+      </body>
+    </html>
   </body>
 </html>
