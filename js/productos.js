@@ -16,7 +16,7 @@ async function cargarProductos() {
           <img src="${p.image}" alt="${p.title}"
                class="h-40 object-contain mb-4" loading="lazy">
           <h3 class="font-semibold text-sm line-clamp-2 mb-2">${p.title}</h3>
-          <p class="text-lg font-bold text-emerald-600 mt-auto">$${p.price}</p>
+          <p class="text-lg font-bold text-gray-600 mt-auto">$${p.price}</p>
         </article>
       `,
       )
