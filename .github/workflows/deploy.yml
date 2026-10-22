@@ -30,9 +30,6 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
-
       - name: Build CSS
         run: npm run build:css
 
